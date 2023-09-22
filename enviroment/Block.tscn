@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 8 )
 
-[node name="Block" type="RigidBody2D"]
+[node name="Block" type="RigidBody2D" groups=["gr_block"]]
 mode = 1
 __meta__ = {
 "_edit_group_": true
