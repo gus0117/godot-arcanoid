@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Ball/bola2-b.png" type="Texture" id=1]
 [ext_resource path="res://Ball/Ball.gd" type="Script" id=2]
+[ext_resource path="res://Assets/hit.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/break.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/you_win.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Assets/lose.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/start.wav" type="AudioStream" id=7]
 
 [sub_resource type="PhysicsMaterial" id=2]
 friction = 0.0
@@ -27,3 +32,18 @@ texture = ExtResource( 1 )
 
 [node name="ball_collider" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="break_a" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="hit_a" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="lose_a" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="start_a" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
+[node name="win_a" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
