@@ -21,8 +21,13 @@ func _physics_process(delta):
 		if body.is_in_group("gr_block"):
 			body.queue_free()
 			block_counter += 1
+			if body.get_parent().get_child_count() <= 0:
+				print("you win")
 			if block_counter == 4:
 				speed_x += plus_speed
 				speed_y += plus_speed
 				linear_velocity = Vector2(speed_x, speed_y)
 				block_counter = 0
+		if body.name == "bot_border":
+			print("You Lose")
+			queue_free()
